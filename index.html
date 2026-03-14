@@ -6,7 +6,7 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="VLA-IAP">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -379,29 +379,29 @@
         <img src="static/images/figure1v3_01.jpg" alt="First research result visualization" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Comparison of Perception-First vs. Interaction-First token pruning paradigms. Perception-First baselines (Top) prematurely lose the manipulation target due to early semantic misalignment—a vulnerability that simple temporal stacking Temporal branch fails to resolve without explicit interaction modeling. In contrast, our VLA-IAP (Bottom) shifts to an Interaction-First approach. By coupling geometric priors with an IoU-aware dynamic strategy—transitioning from conservative (background-only) to aggressive (full) pruning—VLA-IAP successfully preserves the physical target for precise execution.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/figure2v6_01.jpg" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Visualization of Interaction-aligned Pruning Process on LIBERO. (Bottom) Dynamic shift in visual token retention from conservative to aggressive mode. (Middle) The alignment score (IoU) regulating the pruning state. (Top) The overlap (purple) between semantic intent (red) and arm motion (blue) masks that drives the alignment score.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/edge_01.jpg" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Visualization of the Geometric Prior (Edge Enhancement) on VLABench. Top: The Semantic-only pruning strategy incorrectly discards structurally critical edge patches near the gripper-object interface (highlighted by red boxes), losing physical boundaries. Bottom: By incorporating the Sobel edge map (Geometric Prior), our Edge-Enhanced strategy successfully preserves these vital structural anchors (highlighted by green boxes), ensuring geometric continuity for precise robotic manipulation.
+      </h2>.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <img src="static/images/libero_edge_01.jpg" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+        Geometric prior visualization on LIBERO (Wrist View). The Sobel operator consistently extracts structural anchors of the target bowl and environmental constraints. These stable physical contours provide indispensable spatial references for fine manipulation, ensuring the retention of interaction-critical patches independent of the model's semantic attention.
     </div>
   </div>
 </div>
