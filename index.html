@@ -97,6 +97,40 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
+
+  <style>
+    /* 视频网格专属背景框 */
+    .video-grid-container {
+      background-color: #f8f9fa; /* 浅灰色背景，类似截图 */
+      border-radius: 12px;       /* 大圆角 */
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    /* 单个视频项的对齐和排版 */
+    .video-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end; /* 确保视频底部对齐 */
+      margin-bottom: 1.5rem;
+    }
+    
+    .video-item .video-title {
+      font-size: 0.95rem;
+      color: #363636;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .video-item video {
+      width: 100%;
+      border-radius: 6px; /* 视频本身的小圆角 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 淡淡的阴影增加质感 */
+      background-color: #fff; /* 防止加载前黑屏太突兀 */
+    }
+  </style>
+
   
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -432,174 +466,114 @@
 <!-- </section> -->
 <!-- End youtube video -->
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Rollouts of our model</h2>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Rollouts of LIBERO</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/Spatial_global_comparison.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Spatial Task: Pick the black bowl on the ramekin and place it on the plate.</h2> <!-- 任务1描述 -->
+    <h3 class="subtitle is-5">LIBERO</h3>
+
+    <div class="video-grid-container">
+      <div class="columns is-mobile">
+        <div class="column is-half video-item">
+          <p class="video-title">Spatial-Comparison</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/Spatial_global_comparison.mp4" type="video/mp4"></video>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/Object_global_comparison.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Object Task: pick up the milk and place it in the basket.</h2> <!-- 任务2描述 -->
+        <div class="column is-half video-item">
+          <p class="video-title">Object-Comparison</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/Object_global_comparison.mp4" type="video/mp4"></video>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/Goal_global_comparison.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Goal Task: open the middle drawer of the cabinet.</h2> <!-- 任务3描述 -->
+      </div>
+      <div class="columns is-mobile">
+        <div class="column is-half video-item">
+          <p class="video-title">Goal-Comparison</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/Goal_global_comparison.mp4" type="video/mp4"></video>
         </div>
-        <div class="item item-video4">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/Long_global_comparison.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Long Task: put the white mug on the left plate and put the yellow and white mug on the right plate.</h2> <!-- 任务4描述 -->
+        <div class="column is-half video-item">
+          <p class="video-title">Long-Comparison</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/Long_global_comparison.mp4" type="video/mp4"></video>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Visualization of Interaction-alignedPruningProcess on LIBERO. </h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/iou_vis_task5_ep0.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Spatial Task: Pick the black bowl on the ramekin and place it on the plate.</h2> <!-- 任务1描述 -->
+    <div class="video-grid-container">
+      <div class="columns is-mobile">
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Spatial (Baseline)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Spatial_global_comparison.mp4" type="video/mp4"></video>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/iou_vis_task7_ep0.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Object Task: pick up the milk and place it in the basket.</h2> <!-- 任务2描述 -->
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Object (Baseline)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Object_global_comparison.mp4" type="video/mp4"></video>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/iou_vis_task0_ep0.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Goal Task: open the middle drawer of the cabinet.</h2> <!-- 任务3描述 -->
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Goal (Baseline)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Goal_global_comparison.mp4" type="video/mp4"></video>
         </div>
-        <div class="item item-video4">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/iou_vis_task4_ep0.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Long Task: put the white mug on the left plate and put the yellow and white mug on the right plate.</h2> <!-- 任务4描述 -->
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Long (Baseline)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Long_global_comparison.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Spatial (our model)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Spatial_global_comparison.mp4" type="video/mp4"></video>
+        </div>
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Object (our model)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Object_global_comparison.mp4" type="video/mp4"></video>
+        </div>
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Goal (our model)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Goal_global_comparison.mp4" type="video/mp4"></video>
+        </div>
+        <div class="column is-one-quarter video-item">
+          <p class="video-title">Long (our model)</p>
+          <video autoplay controls muted loop playsinline><source src="static/videos/redpandacompress_Long_global_comparison.mp4" type="video/mp4"></video>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
-    
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Rollouts of CALVIN ABC-D</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/calvin_seq.mp4" type="video/mp4">
+    <h3 class="subtitle is-5">Real-World</h3>
+
+    <div class="video-grid-container">
+      <div class="columns is-vcentered">
+        
+        <div class="column is-half video-item">
+          <p class="video-title">Bread Simple</p>
+          <video autoplay controls muted loop playsinline>
+            <source src="static/videos/bread_simple_speed_comparison.mp4" type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">Rotate blue block right success, move slider right, lift red block slider, place in slider, turn off lightbulb.</h2> <!-- 任务1描述 -->
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/calvin0.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Push the blue block left.</h2> <!-- 任务2描述 -->
+
+        <div class="column is-half">
+          <div class="columns is-mobile">
+            <div class="column is-half video-item">
+              <p class="video-title">Sub-task A (Baseline)</p>
+              <video autoplay controls muted loop playsinline><source src="static/videos/1x1_baseline_A.mp4" type="video/mp4"></video>
+            </div>
+            <div class="column is-half video-item">
+              <p class="video-title">Sub-task B (Baseline)</p>
+              <video autoplay controls muted loop playsinline><source src="static/videos/1x1_baseline_B.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-half video-item">
+              <p class="video-title">Sub-task A (our model)</p>
+              <video autoplay controls muted loop playsinline><source src="static/videos/1x1_our_A.mp4" type="video/mp4"></video>
+            </div>
+            <div class="column is-half video-item">
+              <p class="video-title">Sub-task B (our model)</p>
+              <video autoplay controls muted loop playsinline><source src="static/videos/1x1_our_B.mp4" type="video/mp4"></video>
+            </div>
+          </div>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/calvin1.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Open the drawer.</h2> <!-- 任务3描述 -->
-        </div>
-        <div class="item item-video4">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/calvin2.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Move slider left and push the blue block into the drawer.</h2> <!-- 任务4描述 -->
-        </div>
+
       </div>
     </div>
+
   </div>
 </section>
-<!-- End video carousel -->
-
-
-    
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Rollouts of Real-Robot</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/bread_simple_speed_comparison2×.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">Place the bowl on the plate.</h2> <!-- 任务1描述 -->
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/dual_arms_speed_comparison2×.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">For hazardous waste, use the red bin (or hazardous bin). For non-recyclable general waste, use the gray bin (or other waste bin).</h2> <!-- 任务3描述 -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light"> -->
   <!-- <div class="hero-body"> -->
